@@ -8,14 +8,8 @@
 - `payments_count` (int)
 - `total_amount` (float)
 
-## Notes & gotchas
-- `COUNT()` returns `bigint` in PostgreSQL → cast to `int` to match the kata spec.
+## Note
 - `SUM(amount)` is numeric → cast to `float` (`double precision`) per spec.
-- You must **GROUP BY both `customer_id` and `email`** since both are selected and not aggregated.
 
 ## Query
 See [`solution.sql`](./solution.sql).
-
-## How to run (PostgreSQL)
-```bash
-psql -d dvd_rental -f solution.sql
